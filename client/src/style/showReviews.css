@@ -1,0 +1,241 @@
+.hideScroll {
+   overflow: hidden;
+   user-select: none;
+}
+
+#img_showReviews {
+   width: 626px;
+   height: 430px;
+}
+
+#title-review{
+   text-align: center;
+   color: white;
+   margin: 30px 0;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#cards {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 30px;
+   padding: 20px;
+}
+
+.card {
+   border: 2px solid rgba(255, 255, 255, 0.7);
+   border-radius: 8px;
+   color: rgba(255, 255, 255, 0.7);
+   padding: 30px;
+}
+
+.card .card-actions {
+   display: flex;
+   align-items: center;
+}
+
+.card > * {
+   margin-bottom: 10px;
+} 
+
+#cards .card .btn-edit,
+#cards .card .btn-delete {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   width: 50px;
+   height: 50px;
+
+   border-radius: 50%;
+   padding: 10px;
+   border: none;
+   outline: none;
+   margin: 10px 15px 0 0;
+   cursor: pointer;
+}
+
+#cards .card .btn-edit:hover,
+#cards .card .btn-delete:hover{
+   animation: action_buttons 500ms forwards;
+}
+
+#cards .card .btn-edit:focus {
+   transform: scale(80%);
+}
+
+@keyframes action_buttons {
+   from {
+      transform: translateY(0px);
+   }
+
+   to {
+      transform: translateY(-5px);
+   }
+}
+
+#cards .card .btn-edit {
+   background-color: #4FB5B2;
+   text-decoration: none;
+}
+
+#cards .card .btn-delete {
+   background-color: #EC697A;
+}
+
+#cards .card i {
+   color: #fff;
+}
+
+#cards .card .reviewText {
+   width: 350px;
+   word-wrap: break-word;
+}
+
+.form-edit {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   
+   background-color: rgba(0, 0, 0, 0.3);
+   padding: 40px;
+   border-radius: 10px;
+   text-align: center;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   opacity: 0;
+   visibility: hidden;
+
+   transition: all .2s;
+}
+
+.form-edit .close {
+   font-size: 2.5em;
+   color: #fff;
+
+   position: absolute;
+   top: 30px;
+   right: 40px;
+
+   cursor: pointer;
+
+   font-weight: bold;
+
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+
+
+.form-edit .close:hover {
+   transform: translateY(5px);
+}
+
+.form-edit .close:active {
+   transform: scale(80%);
+}
+
+.form-edit h1 {
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.form-edit label {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 1.3em;
+}
+
+.form-edit .currentReview {
+   width: 550px;
+   word-wrap: break-word;
+   color: #fff;
+   font-size: 1.5em;
+   font-family: 'Montserrat', sans-serif;
+}
+
+.form-edit h1,
+.form-edit label {
+   color: #fff;
+   font-weight: bold;
+}
+
+.form-edit > * {
+   margin-bottom: 30px;
+   outline: none;
+}
+
+.form-edit.show{
+   opacity: 1;
+   visibility: visible;
+}
+
+.form-edit textarea {
+   width: 750px;
+   padding: 20px;
+   border-radius: 10px;
+   font-weight: 900;
+   font-size: 15px;
+   color: #114167;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   height: 200px;
+   resize: none;
+}
+
+.form-edit textarea:focus {
+   transform: scale(97%);
+}
+
+.form-edit .btn-group {
+   width: 750px;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+}
+
+.form-edit .btn-group button {
+   width: 240px;
+   height: 40px;
+
+   background-color: transparent;
+   border: 2px solid #fff;
+   border-radius: 10px;
+
+   cursor: pointer;
+
+   font-size: 'Montserrat', sans-serif;
+   font-size: 15px;
+   font-weight: bold;
+
+   color: #fff;
+}
+
+.form-edit .btn-group button:hover {
+   animation: background_button 500ms 0.001ms forwards;
+}
+
+.form-edit .btn-group button:active {
+   transform: scale(90%);
+}
+
+@keyframes background_button {
+   from {
+      background-color: transparent;
+      color: #fff;
+   }
+   
+   to {
+      background-color: #fff;
+      color: #114167; 
+   }
+}

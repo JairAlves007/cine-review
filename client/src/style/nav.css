@@ -1,0 +1,41 @@
+nav{
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   align-self: center;
+
+   padding: 30px;
+}
+
+nav a {
+   text-decoration: none;
+   color: #fff;
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   width: 300px;
+   height: 40px;
+
+   border: 2px solid #fff;
+   border-radius: 10px;
+}
+
+nav a:hover {
+   animation: background 500ms 0.001ms forwards;
+}
+
+@keyframes background {
+   from {
+      background-color: rgba(255, 255, 255, 0);
+      color: #fff;
+      font-weight: 500;
+   }
+   
+   to {
+      background-color: rgba(255, 255, 255, 1);
+      color: #114167;
+      font-weight: 900;
+   }
+}
