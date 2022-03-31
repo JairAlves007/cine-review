@@ -6,8 +6,9 @@ const routes = express.Router();
 const db = mysql.createPool({
    host: 'localhost',
    user: 'root',
-   password: '',
+   password: 'root',
    database: 'cinereview',
+   // socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock',
    port: 3306
 });
 

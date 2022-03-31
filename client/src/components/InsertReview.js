@@ -45,7 +45,7 @@ function InsertReview() {
                   <p className='paragraph'>
                      seja criativo! muitas pessoas poderão
                      visualizar sua publicação! caso deseje visualizar
-                     outras postagens, clique <Link to='api/get'> aqui </Link>
+                     outras postagens, clique <Link to='/api/get'> aqui </Link>
                      agora mesmo!
                   </p>
                </div>

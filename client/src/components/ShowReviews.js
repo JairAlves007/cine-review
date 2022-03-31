@@ -10,7 +10,7 @@ function ShowReviews() {
 
    const [newReview, setNewReview] = useState([]);
 
-   useEffect(() => Crud.get(), []);
+   useEffect(() => Crud.get());
 
    const Crud = {
       get: () => {
@@ -79,7 +79,7 @@ function ShowReviews() {
                   publicadas por nossos usuários logo abaixo.
                </p>
                <p className='paragraph'>
-                  caso deseje, <Link to='api/insert'> Adicione </Link> uma
+                  caso deseje, <Link to='/api/insert'> Adicione </Link> uma
                   agora mesmo!
                </p>
             </div>
@@ -90,7 +90,7 @@ function ShowReviews() {
          <div id="cards">
 
             {
-               reviewsList.map(review => {
+               reviewsList.length > 0 && reviewsList.map(review => {
 
                   return (
                      <div key={review.id}>
